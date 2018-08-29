@@ -1,3 +1,5 @@
+require 'pry'
+
 RSpec.describe "Person" do
 
   let(:stella) { Person.new("Stella") }
@@ -78,7 +80,9 @@ RSpec.describe "Person" do
         it "a person instance can change its hygiene index" do
           people.each do |person|
             original_hygiene = person.hygiene
+            # person.hygiene = person.hygiene + 1
             person.hygiene += 1
+            # binding.pry
             expect(person.hygiene).to eq(original_hygiene + 1)
           end
         end
