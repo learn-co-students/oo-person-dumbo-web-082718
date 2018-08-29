@@ -49,6 +49,8 @@ RSpec.describe "Person" do
           people.each do |person|
             original_happiness = person.happiness
             person.happiness += 1
+             # takes person happiness and increments it by 1
+            #person.happines = 8 + 1
             expect(person.happiness).to eq(original_happiness + 1)
           end
         end
